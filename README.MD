@@ -11,14 +11,14 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 - As a player, I want to get as many correct answers as possible.
 
 
-## Wire frames:
+## Wireframes:
 
+![st1]: https://imgur.com/vsS4qMY
+![st2]: https://imgur.com/88ZHcDP
+![st3]: https://imgur.com/0y08Nlx
 
 
 ## Technologies Used:
 - HTML & CSS
 - JavaScript
 - Google Fonts
-
-testing
-
