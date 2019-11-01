@@ -8,7 +8,7 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 - As a player, I want to click on a subject to select the subject that I want to challenge myself.
 - As a player, I want to click on one(1) of the six(6) index cards that contains different answers to check if my answer is correct.
-- As a player, I want to have more correct answers possible.
+- As a player, I want to get as many correct answers as possible.
 
 
 ## Wire frames:
