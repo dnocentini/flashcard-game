@@ -12,30 +12,30 @@
 
 
 /*----- constants -----*/
-const multiplication = [
-        {"2x1" : "2"},    
-        {"2x2" : "4"},
-        {"2x3" : "6"},
-        {"2x4" : "8"},
-        {"2x5" : "10"},
-        {"2x6" : "12"},
-        {"2x7" : "14"},
-        {"2x8" : "16"},
-        {"2x9" : "18"},
-        {"2x10" : "20"}
-    ];
+const qCardInPlay
+const aCardsInPlay
+const n1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const n2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    console.log(multiplication[0]);
-
-const division = [{}];
-const addition = [{}];
-const subtraction = [{}];
-const JS = [{}];
 
 /*----- app's state (variables) -----*/
+const addCorrectAnswer = (n1[1] + n2[1]);
+const subCorrectAnswer = (n1[1] - n2[1]);
+const multCorrectAnswer = (n1[1] * n2[1]);
+const divCorrectAnswer = (n1[1] / n2[1]);  
+
+/*----- cached element references -----*/
+messageEl = document.getElementById('message');
+resetGameBtn = document.getElementById('resetGame');
 
 
-/*----- event listeners -----*/
-
+// /*----- event listeners -----*/
+subjectEl.addEventListener('click', handleClick);
+aCardEl.addEventListener("click", flipCard);
+resetGameBtn.addEventListener('click', init);
 
 /*----- functions -----*/
+
+// let total = 4;
+
+// document.getElementsById('a1').src='assets/IndexCard' + total + '.png"/>';
