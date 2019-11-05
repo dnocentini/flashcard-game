@@ -34,6 +34,7 @@ const addition = {
 
 /*----- cached element references -----*/
 // messageEl = document.getElementById('message');
+gameBoardEl = document.getElementById('game-board');
 qCardEl = document.getElementById('q1');
 aCard1 = document.getElementById('a1');
 aCard2 = document.getElementById('a2');
@@ -46,8 +47,8 @@ aCard6 = document.getElementById('a6');
 
 // // /*----- event listeners -----*/
 // subjectEl.addEventListener('click', handleClick);
-// aCardEl.addEventListener("click", flipCard);
-// resetGameBtn.addEventListener('click', init);
+gameBoardEl.addEventListener("click", flipCard);
+
 
 /*----- functions -----*/
 
@@ -65,6 +66,19 @@ function generateCards(){
     aCard4.innerText = addition["2+5"];
     aCard5.innerText = addition["2+6"];
     aCard6.innerText = addition["2+7"];
+    
+}
+
+function flipCard(evt){
+    let clickedCard = evt.target
+    if(clickedCard.className !== 'aCards') {
+        return;
+    }
+    if(evt.target.innerText === addition[qCardEl.innerText]) {
+        console.log("Yay!")
+    }else{
+        console.log("Ops!")
+    }
     
 }
 

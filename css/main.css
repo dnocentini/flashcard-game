@@ -1,4 +1,4 @@
-body {
+#game-board {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -9,6 +9,8 @@ body {
 header {
     grid-row: 1/2;
     grid-column: 1/5;
+    text-align: center;
+    align-items: center;
     
 }
 
