@@ -63,16 +63,24 @@ function generateCards(){
     var qKeyPost = getRandomNum(1, 10);
     var qKey = qKeyPre + parseInt(qKeyPost);
 
-
-
-
     qCardEl.innerText = qKey;
-    aCard1.innerText = addition["2+2"];
-    aCard2.innerText = addition["2+3"];
-    aCard3.innerText = addition["2+4"];
-    aCard4.innerText = addition["2+5"];
-    aCard5.innerText = addition["2+6"];
-    aCard6.innerText = addition["2+7"];
+    aCard1.innerText = addition[qKey];
+
+    var aKeys = [];
+
+    for (i = 0; i < 5; i++) {
+        var aKeyPre = '2+'
+        var aKeyPost = getRandomNum(1, 10);
+        var aKey = aKeyPre + parseInt(aKeyPost);
+        aKeys.push(aKey);
+    }
+
+
+    aCard2.innerText = addition[aKeys[0]];
+    aCard3.innerText = addition[aKeys[1]];
+    aCard4.innerText = addition[aKeys[2]];
+    aCard5.innerText = addition[aKeys[3]];
+    aCard6.innerText = addition[aKeys[4]];
     
 }
 
