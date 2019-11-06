@@ -27,10 +27,8 @@ const addition = {
 
 
 /*----- app's state (variables) -----*/
-
-
-// var questionCard
-// var aCard
+var qKey;
+var aKeys = [];
 
 /*----- cached element references -----*/
 // messageEl = document.getElementById('message');
@@ -61,12 +59,10 @@ function init() {
 function generateCards(){
     var qKeyPre = '2+'
     var qKeyPost = getRandomNum(1, 10);
-    var qKey = qKeyPre + parseInt(qKeyPost);
+    qKey = qKeyPre + parseInt(qKeyPost);
+    aKeys.push(qKey);
 
     qCardEl.innerText = qKey;
-    aCard1.innerText = addition[qKey];
-
-    var aKeys = [];
 
     for (i = 0; i < 5; i++) {
         var aKeyPre = '2+'
@@ -74,13 +70,14 @@ function generateCards(){
         var aKey = aKeyPre + parseInt(aKeyPost);
         aKeys.push(aKey);
     }
-
-
-    aCard2.innerText = addition[aKeys[0]];
-    aCard3.innerText = addition[aKeys[1]];
-    aCard4.innerText = addition[aKeys[2]];
-    aCard5.innerText = addition[aKeys[3]];
-    aCard6.innerText = addition[aKeys[4]];
+    shuffle(aKeys);
+    
+    aCard1.innerText = addition[aKeys[0]];
+    aCard2.innerText = addition[aKeys[1]];
+    aCard3.innerText = addition[aKeys[2]];
+    aCard4.innerText = addition[aKeys[3]];
+    aCard5.innerText = addition[aKeys[4]];
+    aCard6.innerText = addition[aKeys[5]];
     
 }
 
@@ -101,7 +98,9 @@ function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
 
-
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
 
 
 
