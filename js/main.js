@@ -57,10 +57,12 @@ function init() {
 }
 
 function generateCards(){
+    var usedNums = [];
     var qKeyPre = '2+'
     var qKeyPost = getRandomNum(1, 10);
     qKey = qKeyPre + parseInt(qKeyPost);
     aKeys.push(qKey);
+    usedNums.push(qKeyPost);
 
     qCardEl.innerText = qKey;
 
@@ -71,7 +73,7 @@ function generateCards(){
         aKeys.push(aKey);
     }
     shuffle(aKeys);
-    
+
     aCard1.innerText = addition[aKeys[0]];
     aCard2.innerText = addition[aKeys[1]];
     aCard3.innerText = addition[aKeys[2]];
@@ -80,6 +82,8 @@ function generateCards(){
     aCard6.innerText = addition[aKeys[5]];
     
 }
+
+    
 
 function flipCard(evt){
     let clickedCard = evt.target
