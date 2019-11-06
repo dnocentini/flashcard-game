@@ -59,7 +59,14 @@ function init() {
 }
 
 function generateCards(){
-    qCardEl.innerText = "2+2";
+    var qKeyPre = '2+'
+    var qKeyPost = getRandomNum(1, 10);
+    var qKey = qKeyPre + parseInt(qKeyPost);
+
+
+
+
+    qCardEl.innerText = qKey;
     aCard1.innerText = addition["2+2"];
     aCard2.innerText = addition["2+3"];
     aCard3.innerText = addition["2+4"];
@@ -82,9 +89,9 @@ function flipCard(evt){
     
 }
 
-// function getRandomNum (min, max) {
-//     return Math.floor(Math.random() * (10 - 1) +1)
-// }
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+}
 
 
 
