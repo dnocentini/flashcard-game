@@ -69,8 +69,12 @@ function generateCards(){
     for (i = 0; i < 5; i++) {
         var aKeyPre = '2+'
         var aKeyPost = getRandomNum(1, 10);
+        while (usedNums.includes(aKeyPost)) {
+            aKeyPost = getRandomNum(1, 10);
+        }
         var aKey = aKeyPre + parseInt(aKeyPost);
         aKeys.push(aKey);
+        usedNums.push(aKeyPost);
     }
     shuffle(aKeys);
 
