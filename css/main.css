@@ -2,7 +2,7 @@ body {
     
     font-family: 'Caveat Brush', cursive;
     margin: 0;
-   
+
 }
 
 #game-board {
@@ -11,7 +11,7 @@ body {
     grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
     text-align: center;
     align-items: center;
-    background-color: #F4E25C;
+    background-image: url("../assets/Classroom.jpg");
 }
 
 header {
@@ -20,8 +20,6 @@ header {
     border-bottom: 4px solid #543F32;
     font-size: 25px;
     color: rgb(207, 21, 21);
-    
-
      
 }
 
@@ -38,9 +36,13 @@ header {
     grid-row: 3/4;
     grid-column: 1/2;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 .text {
@@ -57,18 +59,22 @@ header {
 #eq {
     grid-row: 3/4;
     grid-column: 2/3;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
-    color:rgb(33, 33, 185);
+    color: rgb(33, 33, 185);
 }
 
 #aCard1 {
     grid-row: 2/3;
     grid-column: 3/4;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
     
 }
 
@@ -76,45 +82,65 @@ header {
     grid-row: 2/3;
     grid-column: 4/5;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 #aCard3 {
     grid-row: 3/4;
     grid-column: 3/4;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 #aCard4 {
     grid-row: 3/4;
     grid-column: 4/5;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 #aCard5 {
     grid-row: 4/5;
     grid-column: 3/4;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 #aCard6 {
     grid-row: 4/5;
     grid-column: 4/5;
     position: relative;
-    float: left;
+    justify-self: center;
     text-align: center;
     margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-image: url("../assets/IndexCard.jpg");
+    background-size: contain;
 }
 
 #message {
