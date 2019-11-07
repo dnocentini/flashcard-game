@@ -103,7 +103,7 @@ function generateCards(){
 
 function flipCard(evt){
     if(evt.currentTarget.querySelector('div').innerText === addition[qCardEl.innerText]) {
-        message.innerText = "Yay!"
+        message.innerText = "Yay! You got this."
         setTimeout(function(){
             init();
         }, 2000);
