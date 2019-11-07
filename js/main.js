@@ -29,11 +29,13 @@ const addition = {
 /*----- app's state (variables) -----*/
 var qKey;
 var aKeys = [];
+var score = 0;
 
 /*----- cached element references -----*/
 // messageEl = document.getElementById('message');
 gameBoardEl = document.getElementById('game-board');
 qCardEl = document.getElementById('q1');
+pScore = document.getElementById('score');
 
 aCard1El = document.getElementById('aCard1');
 aCard2El = document.getElementById('aCard2');
@@ -104,6 +106,8 @@ function generateCards(){
 function flipCard(evt){
     if(evt.currentTarget.querySelector('div').innerText === addition[qCardEl.innerText]) {
         message.innerText = "Yay! You got this."
+        score++;
+        pScore.textContent = `Score: ${score}`;
         setTimeout(function(){
             init();
         }, 2000);
