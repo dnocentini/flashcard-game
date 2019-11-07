@@ -34,6 +34,14 @@ var aKeys = [];
 // messageEl = document.getElementById('message');
 gameBoardEl = document.getElementById('game-board');
 qCardEl = document.getElementById('q1');
+
+aCard1El = document.getElementById('aCard1');
+aCard2El = document.getElementById('aCard2');
+aCard3El = document.getElementById('aCard3');
+aCard4El = document.getElementById('aCard4');
+aCard5El = document.getElementById('aCard5');
+aCard6El = document.getElementById('aCard6');
+
 aCard1 = document.getElementById('a1');
 aCard2 = document.getElementById('a2');
 aCard3 = document.getElementById('a3');
@@ -45,7 +53,12 @@ message = document.getElementById('message');
 
 // // /*----- event listeners -----*/
 // subjectEl.addEventListener('click', handleClick);
-gameBoardEl.addEventListener("click", flipCard);
+aCard1El.addEventListener("click", flipCard);
+aCard2El.addEventListener("click", flipCard);
+aCard3El.addEventListener("click", flipCard);
+aCard4El.addEventListener("click", flipCard);
+aCard5El.addEventListener("click", flipCard);
+aCard6El.addEventListener("click", flipCard);
 
 
 /*----- functions -----*/
@@ -86,23 +99,17 @@ function generateCards(){
     aCard4.innerText = addition[aKeys[3]];
     aCard5.innerText = addition[aKeys[4]];
     aCard6.innerText = addition[aKeys[5]];
-    
 }
 
-    
-
 function flipCard(evt){
-    let clickedCard = evt.target
-    if(clickedCard.className !== 'aCards') {
-        return;
-    }
-    if(evt.target.innerText === addition[qCardEl.innerText]) {
+    if(evt.currentTarget.querySelector('div').innerText === addition[qCardEl.innerText]) {
         message.innerText = "Yay!"
         setTimeout(function(){
             init();
         }, 2000);
     }else{
         message.innerText = "Ops!"
+        evt.currentTarget.querySelector('div').innerText = "WRONG"
     }
     
 }
