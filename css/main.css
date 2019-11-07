@@ -5,22 +5,36 @@ body {
 
 }
 
-#game-board {
-    display: grid;
-    grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
-    text-align: center;
-    align-items: center;
-    background-image: url("../assets/Classroom.jpg");
-}
-
 header {
     text-align: center;
     align-items: center;
     border-bottom: 4px solid #543F32;
-    font-size: 25px;
-    color: rgb(207, 21, 21);
-     
+    font-size: 40px;
+    color: rgb(211, 14, 14);     
+}
+
+h1{
+    margin:0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("../assets/Classroom.png");
+}
+
+#message {
+    grid-row: 1/2;
+    grid-column: 1/5;
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(11, 11, 109);
 }
 
 .image {
@@ -50,18 +64,18 @@ header {
     z-index: 100;
     left: 0;
     right: 0;
-    bottom: 40%;
-    font-size: 30px;
+    bottom: 30%;
+    font-size: 50px;
     font-weight: bold;
-    color:rgb(33, 33, 185);
+    color:rgb(11, 11, 109);
 }
 
 #eq {
     grid-row: 3/4;
     grid-column: 2/3;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: bold;
-    color: rgb(33, 33, 185);
+    color: rgb(11, 11, 109);
 }
 
 #aCard1 {
@@ -143,12 +157,3 @@ header {
     background-size: contain;
 }
 
-#message {
-    grid-row: 5/6;
-    grid-column: 1/5;
-    text-align: center;
-    align-items: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(33, 33, 185); 
-}

@@ -108,7 +108,7 @@ function flipCard(evt){
             init();
         }, 2000);
     }else{
-        message.innerText = "Ops!"
+        message.innerText = "Ops! Try again."
         evt.currentTarget.querySelector('div').innerText = "WRONG"
     }
     
