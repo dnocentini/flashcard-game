@@ -41,7 +41,7 @@ aCard4 = document.getElementById('a4');
 aCard5 = document.getElementById('a5');
 aCard6 = document.getElementById('a6');
 
-
+message = document.getElementById('message');
 
 // // /*----- event listeners -----*/
 // subjectEl.addEventListener('click', handleClick);
@@ -97,12 +97,12 @@ function flipCard(evt){
         return;
     }
     if(evt.target.innerText === addition[qCardEl.innerText]) {
-        console.log("Yay!")
+        message.innerText = "Yay!"
         setTimeout(function(){
             init();
         }, 2000);
     }else{
-        console.log("Ops!")
+        message.innerText = "Ops!"
     }
     
 }

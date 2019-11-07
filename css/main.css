@@ -55,3 +55,10 @@ img {
     grid-row: 4/5;
     grid-column: 4/5;
 }
+
+#message {
+    grid-row: 6/7;
+    grid-column: 1/5;
+    text-align: center;
+    align-items: center;
+}
