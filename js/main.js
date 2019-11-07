@@ -53,7 +53,9 @@ gameBoardEl.addEventListener("click", flipCard);
 init();
 
 function init() {
+    aKeys = [];
     generateCards();
+    
 }
 
 function generateCards(){
@@ -96,6 +98,9 @@ function flipCard(evt){
     }
     if(evt.target.innerText === addition[qCardEl.innerText]) {
         console.log("Yay!")
+        setTimeout(function(){
+            init();
+        }, 2000);
     }else{
         console.log("Ops!")
     }
