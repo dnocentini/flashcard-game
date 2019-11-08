@@ -30,7 +30,7 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 - In this case, I picked "Addition"
 
-![fg2](/assets/wireframes/FG2.png)
+![fg2](assets/wireframes/FG2.png)
 
 - If I pick the wrong answer
 
