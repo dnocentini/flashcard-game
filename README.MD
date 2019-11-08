@@ -29,7 +29,7 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 ![fg1M](/assets/wireframes/fg1Menu.png)
 
 - In this case, I picked "Addition"
-![fg2](/assets/wireframes/f22.png)
+![fg2](/assets/wireframes/fg2.png)
 
 - If I pick the wrong answer
 ![fg3](/assets/wireframes/fg3.png)
