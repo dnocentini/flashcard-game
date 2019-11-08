@@ -52,6 +52,6 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 ## Next Steps:
 - Responsive design
 - Stop click event after correct answer is picked
-- Make the answer index cards flip with
+- Make the answer index cards flip
 - Add audio
 - Add Java Script as a Subject
