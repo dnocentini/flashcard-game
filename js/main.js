@@ -152,7 +152,7 @@ function clickCard(evt) {
             generateCards();
         }, 1000);
     } else {
-        messageEl.innerText = 'Ops! Try again.';
+        messageEl.innerText = 'Oops! Try again.';
         evt.currentTarget.querySelector('div').innerText = 'WRONG';
     }
 }
