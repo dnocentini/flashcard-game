@@ -43,7 +43,7 @@ h1{
 #game-board {
     display: grid;
     grid-template-rows: .8fr 1fr 1fr 1fr .2fr;
-    grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+    grid-template-columns: 1fr .5fr 1fr 1fr;
     text-align: center;
     align-items: center;
     background-size: cover;
