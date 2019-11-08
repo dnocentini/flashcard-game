@@ -94,24 +94,28 @@ function pickSubject(evt){
 };
 
 function generateCards(){
-    var usedNums = [];
+    var usedResults = [];
     var qKeyPre = getRandomNum(2, 9);
     var qKeyPost = getRandomNum(1, 10);
     qKey = qKeyPre.toString() + operator + qKeyPost.toString();
     aKeys.push(qKey);
-    usedNums.push(qKeyPost);
+    usedResults.push(questions[qKey]);
 
     qCardEl.innerText = qKey;
 
     for (i = 0; i < 5; i++) {
         var aKeyPre = getRandomNum(2, 9);
         var aKeyPost = getRandomNum(1, 10);
-        while (usedNums.includes(aKeyPost)) {
-            aKeyPost = getRandomNum(1, 10);
-        }
         var aKey = aKeyPre.toString() + operator + aKeyPost.toString();
+
+        while (usedResults.includes(questions[aKey])) {
+            aKeyPre = getRandomNum(2, 9);
+            aKeyPost = getRandomNum(1, 10);
+            aKey = aKeyPre.toString() + operator + aKeyPost.toString();
+        }
+
         aKeys.push(aKey);
-        usedNums.push(aKeyPost);
+        usedResults.push(questions[aKey]);
     }
     shuffle(aKeys);
 
@@ -129,8 +133,9 @@ function flipCard(evt){
         score++;
         pScore.textContent = `Score: ${score}`;
         setTimeout(function(){
-            init();
-        }, 2000);
+            aKeys = [];
+            generateCards();
+        }, 1000);
     }else{
         message.innerText = "Ops! Try again."
         evt.currentTarget.querySelector('div').innerText = "WRONG"
