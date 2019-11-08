@@ -13,17 +13,17 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 ## Wireframes:
 
-- Start here - Pick a subject;
-![st2](/assets/wireframes/Wf0.png)
+- Start here - Pick a subject
+![st2](/assets/wireframes/FG1Menu.png)
 
-- In this case, I picked "Multiplication"
-![st2](/assets/wireframes/Wf1.png)
+- In this case, I picked "Addition"
+![st2](/assets/wireframes/FG2.png)
 
-- Pick a card with your answer;
-![st3](/assets/wireframes/Wf2.png)
+- If I pick the wrong answer
+![st3](/assets/wireframes/FG3.png)
 
-- If you pick the correct card, the card will flip and the same question will appear.
-![st4](/assets/wireframes/Wf3.png)
+- If I pick the correct answer
+![st3](/assets/wireframes/FG4.png)
 
 
 ## Technologies Used:

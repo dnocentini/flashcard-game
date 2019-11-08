@@ -150,7 +150,7 @@ function clickCard(evt) {
         setTimeout(function(){
             aKeys = [];
             generateCards();
-        }, 1000);
+        }, 8000);
     } else {
         messageEl.innerText = 'Ops! Try again.';
         evt.currentTarget.querySelector('div').innerText = 'WRONG';
