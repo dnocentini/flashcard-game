@@ -1,6 +1,6 @@
 # Flashcard Game
 
-![fg1M](/assets/wireframes/fg1Menu.png)
+![fg1M](/assets/wireframes/FG1Menu.png)
 
 ## Purpose:
 
