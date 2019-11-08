@@ -12,30 +12,26 @@
 
 
 /*----- constants -----*/
-const addition = {
-    "2+1" : "3",
-    "2+2" : "4",
-    "2+3" : "5",
-    "2+4" : "6",
-    "2+5" : "7",
-    "2+6" : "8",
-    "2+7" : "9",
-    "2+8" : "10",
-    "2+9" : "11",
-    "2+10" : "12",
-}
+const questions = {}
 
 
 /*----- app's state (variables) -----*/
 var qKey;
 var aKeys = [];
 var score = 0;
+var operator = '';
 
 /*----- cached element references -----*/
-// messageEl = document.getElementById('message');
+menuEl = document.getElementById('menu');
 gameBoardEl = document.getElementById('game-board');
 qCardEl = document.getElementById('q1');
 pScore = document.getElementById('score');
+
+additionEl = document.getElementById('add');
+subtractionEl = document.getElementById('sub');
+multiplicationEl = document.getElementById('mult');
+divisionEl = document.getElementById('divi');
+
 
 aCard1El = document.getElementById('aCard1');
 aCard2El = document.getElementById('aCard2');
@@ -55,6 +51,12 @@ message = document.getElementById('message');
 
 // // /*----- event listeners -----*/
 // subjectEl.addEventListener('click', handleClick);
+additionEl.addEventListener("click", pickSubject);
+subtractionEl.addEventListener("click", pickSubject);
+multiplicationEl.addEventListener("click", pickSubject);
+divisionEl.addEventListener("click", pickSubject);
+
+
 aCard1El.addEventListener("click", flipCard);
 aCard2El.addEventListener("click", flipCard);
 aCard3El.addEventListener("click", flipCard);
@@ -63,48 +65,66 @@ aCard5El.addEventListener("click", flipCard);
 aCard6El.addEventListener("click", flipCard);
 
 
+
 /*----- functions -----*/
 
 init();
 
 function init() {
+    menuEl.style.display = "";
+    gameBoardEl.style.display = "none";
     aKeys = [];
+};
+
+function pickSubject(evt){
+    if(evt.currentTarget.id === 'add'){
+        operator = '+';
+    } else if(evt.currentTarget.id === 'sub'){
+        operator = '-';
+    }else if(evt.currentTarget.id === 'mult'){
+        operator = '*';
+    }else {
+        operator = '/';
+    }
+
+    menuEl.style.display = "none";
+    gameBoardEl.style.display = "";
+    generateQuestions();
     generateCards();
-    
-}
+};
 
 function generateCards(){
     var usedNums = [];
-    var qKeyPre = '2+'
+    var qKeyPre = getRandomNum(2, 9);
     var qKeyPost = getRandomNum(1, 10);
-    qKey = qKeyPre + parseInt(qKeyPost);
+    qKey = qKeyPre.toString() + operator + qKeyPost.toString();
     aKeys.push(qKey);
     usedNums.push(qKeyPost);
 
     qCardEl.innerText = qKey;
 
     for (i = 0; i < 5; i++) {
-        var aKeyPre = '2+'
+        var aKeyPre = getRandomNum(2, 9);
         var aKeyPost = getRandomNum(1, 10);
         while (usedNums.includes(aKeyPost)) {
             aKeyPost = getRandomNum(1, 10);
         }
-        var aKey = aKeyPre + parseInt(aKeyPost);
+        var aKey = aKeyPre.toString() + operator + aKeyPost.toString();
         aKeys.push(aKey);
         usedNums.push(aKeyPost);
     }
     shuffle(aKeys);
 
-    aCard1.innerText = addition[aKeys[0]];
-    aCard2.innerText = addition[aKeys[1]];
-    aCard3.innerText = addition[aKeys[2]];
-    aCard4.innerText = addition[aKeys[3]];
-    aCard5.innerText = addition[aKeys[4]];
-    aCard6.innerText = addition[aKeys[5]];
+    aCard1.innerText = questions[aKeys[0]];
+    aCard2.innerText = questions[aKeys[1]];
+    aCard3.innerText = questions[aKeys[2]];
+    aCard4.innerText = questions[aKeys[3]];
+    aCard5.innerText = questions[aKeys[4]];
+    aCard6.innerText = questions[aKeys[5]];
 }
 
 function flipCard(evt){
-    if(evt.currentTarget.querySelector('div').innerText === addition[qCardEl.innerText]) {
+    if(evt.currentTarget.querySelector('div').innerText === questions[qCardEl.innerText]) {
         message.innerText = "Yay! You got this."
         score++;
         pScore.textContent = `Score: ${score}`;
@@ -126,6 +146,23 @@ function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
   }
 
+function generateQuestions(){
+    for(term1 = 2; term1 <= 9; term1++) {
+        for(term2 = 1; term2 <= 10; term2++) {
+            var result = 0;
+            if(operator === '+'){
+                result = term1 + term2
+            } else if(operator === '-'){
+                result = term1 - term2
+            } else if(operator === '*'){
+                result = term1 * term2
+            } else {
+                result = term1 / term2    
+            }; 
+
+            questions[term1.toString() + operator + term2.toString()] = result.toString();
+        }  
+    }
+}  
 
 
- 
