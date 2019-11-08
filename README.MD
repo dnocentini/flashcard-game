@@ -32,13 +32,9 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 ![fg2](assets/wireframes/FG2.png)
 
-- If I pick the wrong answer
+- When I pick the correct answer
 
 ![fg3](/assets/wireframes/FG3.png)
-
-- If I pick the correct answer
-
-![fg3](/assets/wireframes/FG4.png)
 
 [Let's play](https://dnocentini.github.io/flashcard-game/)
 
