@@ -25,16 +25,20 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 ## Getting Started:
 
 - Start here - Pick a subject
-![fg1M](assets/wireframes/fg1Menu.png)
+
+![fg1M](/assets/wireframes/fg1Menu.png)
 
 - In this case, I picked "Addition"
-![fg2](assets/wireframes/fg2.png)
+
+![fg2](/assets/wireframes/fg2.png)
 
 - If I pick the wrong answer
-![fg3](assets/wireframes/fg3.png)
+
+![fg3](/assets/wireframes/fg3.png)
 
 - If I pick the correct answer
-![fg3](assets/wireframes/fg4.png)
+
+![fg3](/assets/wireframes/fg4.png)
 
 [Let's play](https://dnocentini.github.io/flashcard-game/)
 
@@ -47,7 +51,7 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 ## Next Steps:
 - Responsive design
-- Change the color of the correct card when it is picked
 - Stop click event after correct answer is picked
+- Make the answer index cards flip with
 - Add audio
 - Add Java Script as a Subject
