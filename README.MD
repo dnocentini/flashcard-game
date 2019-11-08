@@ -26,19 +26,19 @@ When I was a kid, my dad found a fun way to teach me multiplication tables using
 
 - Start here - Pick a subject
 
-![fg1M](/assets/wireframes/fg1Menu.png)
+![fg1M](/assets/wireframes/FG1Menu.png)
 
 - In this case, I picked "Addition"
 
-![fg2](/assets/wireframes/fg2.png)
+![fg2](/assets/wireframes/FG2.png)
 
 - If I pick the wrong answer
 
-![fg3](/assets/wireframes/fg3.png)
+![fg3](/assets/wireframes/FG3.png)
 
 - If I pick the correct answer
 
-![fg3](/assets/wireframes/fg4.png)
+![fg3](/assets/wireframes/FG4.png)
 
 [Let's play](https://dnocentini.github.io/flashcard-game/)
 
